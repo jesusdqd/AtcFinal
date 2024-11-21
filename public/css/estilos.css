@@ -1,0 +1,10 @@
+body {
+    display: flex;
+    flex-direction: column; /* Cambiado para apilar el nav y main */
+    padding: 0;
+    margin: 0;
+    background-color: #1C1C1E;
+}
+
+
+

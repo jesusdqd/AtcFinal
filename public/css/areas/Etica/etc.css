@@ -1,0 +1,338 @@
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #1C1C1E;
+    padding: 10px 20px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    border-bottom: 3px solid #D4AF37;
+}
+
+.nav-links, .right-links {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+    gap: 20px;
+}
+
+.right-links a {
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+    transition: transform 0.2s ease, color 0.2s ease;
+}
+
+.nav-links-right { 
+    display: flex;
+    align-items: center;
+    margin-left: auto; 
+}
+
+.nav-links-right a {
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+    margin-left: 20px; 
+}
+
+.right-links {
+    margin-left: auto; 
+}
+
+nav a {
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+}
+
+nav a img {
+    width: 32px; 
+    height: 32px; 
+    margin-right: 15px;
+}
+
+.nav-item {
+    display: flex;
+    align-items: center;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+    transition: transform 0.2s ease, color 0.2s ease, box-shadow 0.2s ease;
+    opacity: 0;
+    animation: fadeIn 0.5s ease-out forwards;
+}
+
+.nav-links a:hover {
+    transform: scale(1.1);
+    color: #545454;
+}
+
+.right-links a:hover {
+    transform: scale(1.1);
+    color: #545454;
+}
+@keyframes slideInFromTop {
+    0% {
+        transform: translateY(-100%);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+    transition: transform 0.3s ease-in-out; 
+}
+
+.dropbtn {
+    color: white;
+    font-size: 18px; 
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #1C1C1E;
+    min-width: 220px;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+    z-index: 1;
+    animation: fadeInDropdown 0.5s ease-out;
+}
+
+.dropdown-content a {
+    color: white;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: flex;  
+    align-items: center;  
+    gap: 10px;  
+    transition: background-color 0.2s;
+}
+
+.dropdown:hover {
+    transform: scale(1.1);
+}
+
+.dropdown-content a:hover {
+    background-color: #D4AF37;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+@keyframes fadeInDropdown {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+body {
+    background-color: #1C1C1E;
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 800;
+    font-style: normal;
+    margin: 0;
+    background-image: url('https://wallpapers.com/images/hd/fondonegro-4k-cautivador-m8k0dox5n1m3gcbt.jpg'); /* Fondo relacionado con la ética */
+    background-size: cover;
+    background-position: center;
+    animation: backgroundSlide 10s infinite alternate;
+}
+
+/* Estilo de los encabezados */
+h1 {
+    font-size: 36px;
+    color: #D4AF37;
+    margin-top: 20px;
+    text-align: center;
+}
+
+h2 {
+    font-size: 28px;
+    color: #D4AF37;
+    margin-top: 30px;
+    text-align: center;
+}
+
+/* Estilos para la sección de ética */
+#descripcion {
+    padding: 20px;
+    text-align: center;
+    color: #D4AF37;
+    font-size: 18px;
+    animation: fadeInText 1s ease-out;
+    background-color: rgba(0, 0, 0, 0.5); /* Fondo semitransparente para destacar el texto */
+    border-radius: 10px;
+}
+
+#descripcion img {
+    width: 50px;
+    height: 50px;
+    margin-right: 10px;
+    vertical-align: middle;
+}
+
+/* Animación para la descripción de ética */
+@keyframes fadeInText {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+/* Estilos de la lista de temas */
+#temas {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+#temas ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+/* Estilo de los temas */
+#temas > ul > li {
+    background-color: #333;
+    color: #D4AF37;
+    padding: 10px;
+    margin: 10px 0;
+    cursor: pointer;
+    border-radius: 8px;
+    position: relative;
+    animation: fadeInItem 0.5s ease-out;
+    transition: transform 0.3s ease-in-out; 
+}
+
+/* Animación de aparición de los temas */
+@keyframes fadeInItem {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+/* Estilo de los subtemas (ocultos inicialmente) */
+#temas ul ul {
+    display: none;
+    padding-left: 20px;
+}
+
+#temas ul ul li {
+    background-color: #444;
+    color: #fff;
+    margin: 5px 0;
+    padding: 5px 10px;
+    border-radius: 6px;
+    opacity: 0;  /* Inicialmente ocultos */
+    animation: fadeInSubItem 0.5s ease-out forwards;
+}
+
+/* Animación de aparición de los subtemas */
+@keyframes fadeInSubItem {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+/* Mostrar subtemas al pasar el mouse o hacer clic en el tema */
+#temas > ul > li:hover > ul,
+#temas > ul > li:focus-within > ul {
+    display: block;
+    transform: translateY(0);
+    opacity: 1;
+    animation: slideDown 0.3s ease-in-out; /* Animación de despliegue */
+}
+
+/* Animación de deslizamiento hacia abajo */
+@keyframes slideDown {
+    0% {
+        transform: translateY(-20px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+/* Estilos responsivos */
+@media (max-width: 768px) {
+    .nav-links {
+        flex-direction: column; /* Cambiar a columna en pantallas pequeñas */
+        gap: 10px;
+    }
+
+    .navbar {
+        padding: 10px;
+    }
+
+    h1 {
+        font-size: 28px;
+    }
+
+    h2 {
+        font-size: 24px;
+    }
+
+    #temas {
+        padding: 10px;
+    }
+
+    #temas > ul > li {
+        font-size: 16px;
+        padding: 8px;
+    }
+
+    #temas ul ul li {
+        font-size: 14px;
+        padding: 5px 10px;
+    }
+}
+
+/* Animación de fondo */
+@keyframes backgroundSlide {
+    0% {
+        background-position: 0 0;
+    }
+    100% {
+        background-position: 100% 100%;
+    }
+}

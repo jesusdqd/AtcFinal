@@ -1,0 +1,17 @@
+    body {
+        font-family: "Montserrat", sans-serif;
+        font-optical-sizing: auto;
+        font-weight: 800;
+        font-style: normal;
+        margin: 0;
+    }       
+    .footer {
+        text-align: center; 
+        position: relative; 
+        bottom: 0; 
+        width: 90%; 
+        margin: 0 auto;
+        padding: 20px ; 
+        color: #fff; 
+        font-size: 12px;
+    }
