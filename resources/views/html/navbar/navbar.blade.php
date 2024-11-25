@@ -10,13 +10,13 @@
 
     <nav>
     <ul class="nav-links">
-        <li><a href="#Inicio">
+        <li><a href="{{ route('inicio') }}">
             <img src="{{ asset('Assets/Iconos/Barra_Navegacion/InicioBottom.png') }}" alt="Icono de Inicio">Inicio</a></li>
         <li><a href="#examen">
             <img src="{{ asset('Assets/Iconos/Barra_Navegacion/Examen.png') }}" alt="Icono de Examen">Examen</a></li>
         <li><a href="#Ranking">
             <img src="{{ asset('Assets/Iconos/Barra_Navegacion/Trofeo.png') }}" alt="Icono de Ranking">Ranking</a></li>
-        <li><a href="#juegos">
+        <li><a href="{{ route('juegos') }}">
             <img src="{{ asset('Assets/Iconos/Barra_Navegacion/Mando.png') }}" alt="Icono de Juegos">Juegos</a></li>
     </ul>
 

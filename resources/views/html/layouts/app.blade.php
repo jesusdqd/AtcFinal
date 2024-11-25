@@ -19,8 +19,7 @@
     @include ('html.navbar.navbar')
     @include('html.areas.areas')
     @include('html.chatbox.chatbox')
-  
-
+    
     <!-- Aquí va el contenido específico de cada página -->
      <div class="container">
         @yield('content')

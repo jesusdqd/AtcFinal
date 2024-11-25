@@ -1,3 +1,4 @@
+@extends('html.layouts.chatboxm')
 
 <head>
     <link rel="stylesheet" href="{{ asset('css/areas/arte/art.css') }}">
@@ -26,7 +27,7 @@
                 </div>
             </li>
             <div class="right-links">
-                <li><a href="/ApruebaTuConocimiento/index.php">
+            <li><a href="{{ route('inicio') }}">
                     <img src="/Assets/Iconos/Barra_Navegacion/InicioBottom.png" alt="Icono de Inicio" style="margin-right: 20px;">Inicio</a></li>
                 <li><a href="/Html/Navbar/Juegos/juegos.html">
                     <img src="/Assets/Iconos/Barra_Navegacion/Mando.png" alt="Icono de Juegos"

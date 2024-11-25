@@ -25,24 +25,23 @@
         <div class="footer-content">
             <div class="footer-links-container">
                 <div class="footer-links">
-                    <a href="#" class="footer-link">
-                        <img src="{{ asset('Assets/Iconos/Barra_Navegacion/Novedades.png') }}" alt="Icono de Novedades">
-                        NOVEDADES
-                    </a>
-                    <a href="#" class="footer-link">
+                <a href="{{ route('navbar.navif.novedades') }}" class="footer-link">
+                    <img src="{{ asset('Assets/Iconos/Barra_Navegacion/Novedades.png') }}" alt="Icono de Novedades">
+                    NOVEDADES
+                </a>
+                    <a href="{{ route('navbar.navif.contacto') }}" class="footer-link">
                         <img src="{{ asset('Assets/Iconos/Barra_Navegacion/Contacto.png') }}" alt="Icono de Contacto">
                         CONTACTO
-                    </a>
-                    <a href="#" class="footer-link">
+                </a>
+                    <a href="{{ route('navbar.navif.reseñas') }}" class="footer-link">
                         <img src="{{ asset('Assets/Iconos/Barra_Navegacion/Reseñas.png') }}" alt="Icono de Reseñas">
                         RESEÑAS
-                    </a>
+                </a>
                 </div>
             </div>
         </div>
     </div>
 </footer>
- 
 </body>
 </html>
 @endsection

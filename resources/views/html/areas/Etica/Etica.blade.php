@@ -1,3 +1,5 @@
+@extends('html.layouts.chatboxm')
+
 <html lang="es">
 <head>
     <meta charset="UTF-8">
@@ -34,7 +36,7 @@
             </li>
         </ul>
             <div class="right-links">
-                <li><a href="/ApruebaTuConocimiento/index.php">
+                <li><a href="{{ route('inicio') }}">
                     <img src="/Assets/Iconos/Barra_Navegacion/InicioBottom.png" alt="Icono de Inicio" class="nav-icon">Inicio</a></li>
                 <li><a href="/Html/Navbar/Juegos/juegos.html">
                     <img src="/Assets/Iconos/Barra_Navegacion/Mando.png" alt="Icono de Juegos" class="nav-icon">Juegos</a></li>
@@ -75,5 +77,6 @@
             </ul>
         </section>
     </main>
+
 </body>
 </html>
