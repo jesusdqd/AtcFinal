@@ -5,14 +5,14 @@
     <div class="Tienda">
         @php
             $areas = [
-                ['name' => 'Matematicas', 'image' => 'Matematicas/Matematicas.png', 'link' => 'html/areas/Matematicas/matematicas.blade.php'],
-                ['name' => 'Politica', 'image' => 'Politica/Politica.png', 'link' => 'html/areas/Politica/Politica.html'],
-                ['name' => 'Arte', 'image' => 'Arte/Arte.png', 'link' => 'html/areas/Arte/Arte.html'],
-                ['name' => 'Quimica', 'image' => 'Quimica/Quimica.png', 'link' => 'html/areas/Quimica/Quimica.html'],
-                ['name' => 'Lectura', 'image' => 'Lectura//Lectura.png', 'link' => 'html/areas/Lectura/Lectura.html'],
-                ['name' => 'Etica', 'image' => 'Etica/Etica.png', 'link' => 'html/areas/Etica/Etica.html'],
-                ['name' => 'Religion', 'image' => 'Religion/Religion.png', 'link' => 'html/areas/Religion/Religion.html'],
-                ['name' => 'Informatica', 'image' => 'Informatica/Informatica.png', 'link' => 'html/areas/Informatica/Informatica.html']
+                ['name' => 'Matematicas', 'image' => 'Matematicas/Matematicas.png', 'link' => 'areas/matematicas'],
+                ['name' => 'Politica', 'image' => 'Politica/Politica.png', 'link' => 'areas/politica'],
+                ['name' => 'Arte', 'image' => 'Arte/Arte.png', 'link' => 'areas/arte'],
+                ['name' => 'Quimica', 'image' => 'Quimica/Quimica.png', 'link' => 'areas/quimica'],
+                ['name' => 'Lectura', 'image' => 'Lectura//Lectura.png', 'link' => 'areas/lectura'],
+                ['name' => 'Etica', 'image' => 'Etica/Etica.png', 'link' => 'areas/etica'],
+                ['name' => 'Religion', 'image' => 'Religion/Religion.png', 'link' => 'areas/religion'],
+                ['name' => 'Informatica', 'image' => 'Informatica/Informatica.png', 'link' => 'areas/informatica']
             ];
         @endphp
 

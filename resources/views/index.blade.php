@@ -37,10 +37,6 @@
                         <img src="{{ asset('Assets/Iconos/Barra_Navegacion/Reseñas.png') }}" alt="Icono de Reseñas">
                         RESEÑAS
                     </a>
-                    <a href="#" class="footer-link">
-                        <img src="{{ asset('Assets/Iconos/Barra_Navegacion/Publicidad.png') }}" alt="Icono de Publicidad">
-                        PUBLICIDAD
-                    </a>
                 </div>
             </div>
         </div>

@@ -1,4 +1,16 @@
-/* Estilos para la barra de navegación */
+body {
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 800;
+    font-style: normal;
+    margin: 0;
+}
+.nav-icon {
+    width: 32px; 
+    height: 32px; 
+    margin-right: 10px; 
+}
+
 .navbar {
     background-color: #1C1C1E;
     padding: 10px 20px;
@@ -45,8 +57,8 @@ nav a img {
 }
 
 .nav-links a:hover {
-    transform: scale(1.1);
-    color: #545454;
+    color: #D4AF37; 
+    transform: scale(1.5); 
 }
 
 /* Estilos para el menú desplegable */

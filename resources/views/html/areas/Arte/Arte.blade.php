@@ -1,38 +1,38 @@
-@extends('layouts.app')
+
 <head>
     <link rel="stylesheet" href="{{ asset('css/areas/arte/art.css') }}">
 </head>
-@section('content')
+
     <nav class="navbar">
         <ul class="nav-links">
             <li class="dropdown">
                 <a href="#" class="dropbtn">
-                    <img src="/ApruebaTuConocimiento/Assets/Iconos/sombrero-de-graduacion.png" alt="Icono de Áreas" class="nav-icon">Áreas</a>
+                    <img src="/Assets/Iconos/sombrero-de-graduacion.png" alt="Icono de Áreas" class="nav-icon">Áreas</a>
                 <div class="dropdown-content">
                     <a href="/ApruebaTuConocimiento/Html/Areas/Quimica/Quimica.html">
-                        <img src="/ApruebaTuConocimiento/Assets/Iconos/Areas/quimica.png" alt="Quimica" class="nav-icon">Química</a>
+                        <img src="/Assets/Iconos/Areas/quimica.png" alt="Quimica" class="nav-icon">Química</a>
                     <a href="/ApruebaTuConocimiento/Html/Areas/Informatica/Informatica.html">
-                        <img src="/ApruebaTuConocimiento/Assets/Iconos/Areas/informatica.png" alt="Informática" class="nav-icon">Informática</a>
+                        <img src="/Assets/Iconos/Areas/informatica.png" alt="Informática" class="nav-icon">Informática</a>
                     <a href="/ApruebaTuConocimiento/Html/Areas/Religion/Religion.html">
-                        <img src="/ApruebaTuConocimiento/Assets/Iconos/Areas/religion.png" alt="Religión" class="nav-icon">Religión</a>
+                        <img src="/Assets/Iconos/Areas/religion.png" alt="Religión" class="nav-icon">Religión</a>
                     <a href="/ApruebaTuConocimiento/Html/Areas/Matematicas/matematicas.html">
-                        <img src="/ApruebaTuConocimiento/Assets/Iconos/Areas/matematicas.png" alt="Matemáticas" class="nav-icon">Matemáticas</a>
+                        <img src="/Assets/Iconos/Areas/matematicas.png" alt="Matemáticas" class="nav-icon">Matemáticas</a>
                     <a href="/ApruebaTuConocimiento/Html/Areas/Etica/Etica.html">
-                        <img src="/ApruebaTuConocimiento/Assets/Iconos/Areas/etica.png" alt="Ética" class="nav-icon">Ética</a>
+                        <img src="/Assets/Iconos/Areas/etica.png" alt="Ética" class="nav-icon">Ética</a>
                     <a href="/ApruebaTuConocimiento/Html/Areas/Lectura/Lectura.html">
-                        <img src="/ApruebaTuConocimiento/Assets/Iconos/Areas/lectura.png" alt="Lectura" class="nav-icon">Lectura</a>
+                        <img src="/Assets/Iconos/Areas/lectura.png" alt="Lectura" class="nav-icon">Lectura</a>
                     <a href="/ApruebaTuConocimiento/Html/Areas/Politica/Politica.html">
-                        <img src="/ApruebaTuConocimiento/Assets/Iconos/Areas/politica.png" alt="Política" class="nav-icon">Política</a>
+                        <img src="/Assets/Iconos/Areas/politica.png" alt="Política" class="nav-icon">Política</a>
                 </div>
             </li>
             <div class="right-links">
                 <li><a href="/ApruebaTuConocimiento/index.php">
-                    <img src="/ApruebaTuConocimiento/Assets/Iconos/Barra_Navegacion/InicioBottom.png" alt="Icono de Inicio" style="margin-right: 20px;">Inicio</a></li>
+                    <img src="/Assets/Iconos/Barra_Navegacion/InicioBottom.png" alt="Icono de Inicio" style="margin-right: 20px;">Inicio</a></li>
                 <li><a href="/Html/Navbar/Juegos/juegos.html">
-                    <img src="/ApruebaTuConocimiento/Assets/Iconos/Barra_Navegacion/Mando.png" alt="Icono de Juegos"
+                    <img src="/Assets/Iconos/Barra_Navegacion/Mando.png" alt="Icono de Juegos"
                     style="margin-right: 20px;">Juegos</a></li>
                 <li><a href="/Html/Navbar/Examen/examen.html">
-                    <img src="/ApruebaTuConocimiento/Assets/Iconos/Barra_Navegacion/Examen.png" alt="Icono de Examen"
+                    <img src="/Assets/Iconos/Barra_Navegacion/Examen.png" alt="Icono de Examen"
                     style="margin-right: 20px;">Exámenes</a></li>
             </div>
         </ul>
@@ -81,4 +81,3 @@
             </ul>
         </section>
     </main>
-@endsection
