@@ -5,7 +5,7 @@
     <title>@yield('title', 'Aprueba tu conocimiento')</title>
 
     <!-- CSS del chatbox -->
-    <link rel="stylesheet" href="{{ asset('css/chatbox.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/chatbox/chatbox.css') }}">
 </head>
 <body>
     <!-- Incluye únicamente el chatbox -->

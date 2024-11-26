@@ -1,0 +1,30 @@
+.novedades-container {
+    padding: 40px;
+    font-family: Arial, sans-serif;
+}
+
+.novedades-container h1 {
+    text-align: center;
+    color: #D4AF37; 
+    margin-bottom: 20px;
+}
+
+.novedades-container section h2 {
+    color: #D4AF37; 
+    margin-bottom: 10px;
+}
+
+.novedades-container ul {
+    list-style-type: square;
+    padding-left: 20px;
+}
+
+.novedades-container ul li {
+    margin-bottom: 10px;
+    line-height: 1.6;
+}
+
+.novedades-container p {
+    font-size: 1rem;
+    color: #525252;
+}
