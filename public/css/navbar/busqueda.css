@@ -1,0 +1,48 @@
+/* Personalización del fondo */
+body {
+    background-color: #f4f4f9;
+    font-family: 'Arial', sans-serif;
+}
+
+/* Personalización de los títulos */
+h1, h2, h3 {
+    color: #4CAF50;
+    text-align: center;
+}
+
+/* Estilo para botones */
+button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+/* Estilo para la barra de búsqueda */
+.search-bar {
+    width: 100%;
+    padding: 10px;
+    margin: 20px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+/* Estilo para resultados de búsqueda */
+.resultados {
+    list-style-type: none;
+    padding: 0;
+}
+
+.resultados li {
+    background-color: #fff;
+    margin: 10px 0;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}

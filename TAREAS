@@ -1,0 +1,10 @@
+VALENCIA: 
+1. Cargar contenido a juegos, ranking y examenes
+2. Cargar contenido a las areas faltantes
+
+JESUS:
+1. Utilizar controller para redireccionar los botones de las areas inicio,juegos y examenes ✅
+2. Utilizar controller para las vistas de las areas ✅
+3. Cargar contenido de la navbar inferior: novedades,contacto y reseñas
+4. Finalizar chatbox y para todas las paginas ✅
+5. Usar boostrap para el cambio de banner

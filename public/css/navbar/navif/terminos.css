@@ -1,0 +1,33 @@
+body {
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 800;
+    font-style: normal;
+    margin: 0;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    min-height: 0;
+}
+
+.content {
+    padding: 50px;
+}
+
+.content h2 {
+    text-align: center;
+    font-size: 2em;
+    color: #D4AF37;
+}
+
+.content p {
+    text-align: justify;
+    line-height: 1.9;
+    font-size: 1.1em;
+    color: #ffffff;
+    margin-bottom: 40px;
+}
