@@ -1,0 +1,8 @@
+@import 'index.css';
+@import 'areas/areas.css';
+@import 'navbar/navbar.css';
+@import 'navbar/navif/navif.css';
+@import 'chatbox/chatbox.css';
+@import 'busqueda.css';
+
+@import 'cursor/cursor.css';

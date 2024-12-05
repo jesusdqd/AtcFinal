@@ -10,6 +10,7 @@ use App\Http\Controllers\BusquedaController;
 use App\Http\Controllers\TemaController; 
 use App\Http\Controllers\SubtemaController; 
 use App\Http\Controllers\AuthController;
+use App\Http\Controllers\ContactController;
 
 // Página de inicio
 Route::get('/', function () {
@@ -41,7 +42,6 @@ Route::get('/areas/{area}',[AreaController::class, 'show'])->name('areas.show');
 Route::prefix('navbar')->group(function () {
     Route::get('/', [NavbarController::class, 'show'])->name('navbar.show');
     Route::get('/inicio', [NavbarController::class, 'inicio'])->name('navbar.inicio');
-    Route::get('/ranking', [NavbarController::class, 'ranking'])->name('navbar.ranking');
     Route::get('/novedades', [NavbarController::class, 'novedades'])->name('navbar.navif.novedades');
     Route::get('/contacto', [NavbarController::class, 'contacto'])->name('navbar.navif.contacto');
     Route::post('/contacto/submit', [NavbarController::class, 'submit'])->name('contacto.submit');
@@ -50,6 +50,7 @@ Route::prefix('navbar')->group(function () {
     Route::get('/privacidad', [NavbarController::class, 'privacidad'])->name('navbar.navif.privacidad');
     Route::get('/terminos', [NavbarController::class, 'terminos'])->name('navbar.navif.terminos');
 });
+
 // Exámenes
 Route::get('/examen', [ExamenController::class, 'index'])->name('examen.index');
 Route::get('/examen/{id}', [ExamenController::class, 'show'])->name('examen.show');
@@ -57,14 +58,24 @@ Route::post('/examen/{id}/submit', [ExamenController::class, 'submit'])->name('e
 
 
 // NavbarSP
+
+// NavbarSuperior
+
 Route::prefix('navsp')->group(function () {
     Route::get('/inicio', [NavspController::class, 'inicio'])->name('inicio');
     Route::get('/juegos', [NavspController::class, 'juegos'])->name('juegos');
-    Route::get('/examenes', [NavspController::class, 'examenes'])->name('examenes');
     Route::get('/sesion', [NavspController::class, 'sesion'])->name('sesion');
+
 });
 
 Route::get('/buscar', [BusquedaController::class, 'buscar'])->name('buscar');
 
 Route::get('/tema/{id}', [TemaController::class, 'show'])->name('tema.show');
 Route::get('/subtema/{id}', [SubtemaController::class, 'show'])->name('subtema.show');
+
+Route::get('/ranking', [NavspController::class, 'ranking'])->name('ranking');
+
+// Rutas para el examen
+Route::get('/examen', [ExamenController::class, 'index'])->name('examen.examen');
+
+Route::post('/contacts', [ContactController::class, 'store'])->name('contacts.store');

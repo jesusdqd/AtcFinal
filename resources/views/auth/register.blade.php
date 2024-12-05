@@ -1,5 +1,5 @@
 <head>
-
+    <link rel="stylesheet" href="{{ asset('css/Cursor/cursor.css') }}">
     <link rel="stylesheet" href="{{ asset('css/Registros-Sesion/Registros.css') }}">
 </head>
 <body>

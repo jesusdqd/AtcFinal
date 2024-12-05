@@ -2,7 +2,7 @@
 
 <head>
     <link rel="stylesheet" href="{{ asset('css/navbar/navif/novedades.css') }}">
-    <link rel="stylesheet" href="{{ asset('css/cursor.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/Cursor/cursor.css') }}">
 </head>
 
 @include ('navbar.navbarsp')

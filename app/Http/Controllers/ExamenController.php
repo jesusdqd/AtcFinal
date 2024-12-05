@@ -7,7 +7,6 @@ use Illuminate\Http\Request;
 class ExamenController extends Controller
 {
     
-
     public function index()
     {
         $areas = [
@@ -26,18 +25,17 @@ class ExamenController extends Controller
             2 => ['id' => 2, 'nombre' => 'Política'],
             3 => ['id' => 3, 'nombre' => 'Informatica'],
         ];
-    
-        // Definición de preguntas para el examen de matemáticas (solo como prueba)
+
         $preguntas = [
             1 => [
                 ['id' => 1, 'texto' => '¿Cuánto es 2 + 2?', 'opciones' => ['3', '4', '5']],
                 ['id' => 2, 'texto' => '¿Cuál es la raíz cuadrada de 16?', 'opciones' => ['2', '4', '8']],
             ],
-            // Las demás áreas se pueden dejar vacías o agregarse según se desee.
+
         ];
     
         if (!isset($areas[$id])) {
-            abort(404); // Retorna un error 404 si el área no existe
+            abort(404); 
         }
     
         $area = $areas[$id];
@@ -46,5 +44,4 @@ class ExamenController extends Controller
         return view('examen.show', compact('area', 'preguntasArea'));
     }
 }
-
 

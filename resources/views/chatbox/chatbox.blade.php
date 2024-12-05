@@ -1,19 +1,18 @@
-<html lang="en">
+<!DOCTYPE html>
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Chatbox</title>
-    <link rel="stylesheet" href="{{ asset('assets/css/chatbox.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/chatbox/chatbox.css') }}">
 </head>
 <body>
-    <!-- Botón flotante -->
     <input type="checkbox" id="toggle-chat" class="toggle-chat" aria-hidden="true">
     <label for="toggle-chat" class="chat-button" aria-label="Abrir chat">
         <img src="{{ asset('assets/Iconos/Barra_Navegacion/Chatbox.png') }}" alt="Chatbox Icono">
     </label>
 
-    <!-- Nueva card del chat -->
-    <div class="card chatbox">
+    <div class="chat-card"> 
         <div class="chat-header">
             Chat
             <label for="toggle-chat" class="close-chatbox" aria-label="Cerrar chat">×</label>
@@ -24,7 +23,7 @@
             </ul>
         </div>
         <div class="chat-input">
-            <input type="text" class="message-input" placeholder="Escribe tu mensaje aquí" aria-label="Escribe tu mensaje">
+            <input type="text" class="message-input" placeholder="Escribe tu mensaje aquí">
             <button class="send-button">Enviar</button>
         </div>
     </div>

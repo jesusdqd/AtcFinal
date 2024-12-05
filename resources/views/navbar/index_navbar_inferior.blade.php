@@ -15,11 +15,7 @@
             </a>
                 <a href="{{ route('navbar.navif.contacto') }}" class="footer-link">
                     <img src="{{ asset('Assets/Iconos/Barra_Navegacion/Contacto.png') }}" alt="Icono de Contacto">
-                    Contacto
-            </a>
-                <a href="{{ route('navbar.navif.acerca') }}" class="footer-link">
-                    <img src="{{ asset('Assets/Iconos/Barra_Navegacion/Reseñas.png') }}" alt="Icono de Reseñas">
-                    Reseñas
+                Contacto
             </a>
             </div>
         </div>

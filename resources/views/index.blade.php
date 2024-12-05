@@ -10,8 +10,8 @@
 </head>
 <body>
 
-    @include ('navbar.indexnavdown')
-    @include ('navbar.indexnavdown2')
+    @include ('navbar.index_navbar_inferior')
+    @include ('navbar.index_navbar_inferior2')
     
     <footer>
         &copy; 2024 ApruebaTuConocimiento.com – All Rights Reserved.

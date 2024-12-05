@@ -20,4 +20,9 @@ class NavspController extends Controller
     {
         return view('navbar.examen'); // Redirige a la vista Exámenes
     }
+    public function ranking()
+    {
+        return view('ranking.ranking'); // Redirige a la vista Exámenes
+    }
+  
 }

@@ -23,7 +23,7 @@
                 <a href="{{ route('areas.show', 'etica') }}">
                     <img src="/Assets/Iconos/Areas/etica.png" alt="etica" class="nav-icon">Etica</a>
                     <a href="{{ route('areas.show', 'etica') }}">
-                <img src="/Assets/Iconos/Areas/arte.png" alt="arte"       class="nav-icon">Arte</a>
+                <img src="/Assets/Iconos/Areas/arte.png" alt="arte" class="nav-icon">Arte</a>
             </div>
         </li>
         <div class="right-links">
@@ -32,7 +32,7 @@
             <li><a href="{{ route('juegos') }}">
                 <img src="/Assets/Iconos/Barra_Navegacion/Mando.png" alt="Icono de Juegos"
                 style="margin-right: 20px;">Juegos</a></li>
-            <li><a href="/Html/Navbar/Examen/examen.html">
+            <li><a href="{{ route('examen.examen') }}">
                 <img src="/Assets/Iconos/Barra_Navegacion/Examen.png" alt="Icono de Examen"
                 style="margin-right: 20px;">Exámenes</a></li>
         </div>
