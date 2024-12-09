@@ -49,7 +49,17 @@ Route::prefix('navbar')->group(function () {
     Route::get('/acerca', [NavbarController::class, 'acerca'])->name('navbar.navif.acerca');
     Route::get('/privacidad', [NavbarController::class, 'privacidad'])->name('navbar.navif.privacidad');
     Route::get('/terminos', [NavbarController::class, 'terminos'])->name('navbar.navif.terminos');
+    
 });
+
+// Ruta para el perfil del usuario
+Route::get('/perfil', function () {
+    return view('perfil');  // Asegúrate de crear esta vista de perfil
+})->name('perfil')->middleware('auth'); 
+// Ruta para actualizar el perfil
+Route::post('/perfil/actualizar', [AuthController::class, 'actualizarPerfil'])->name('perfil.actualizar')->middleware('auth');
+Route::post('/logout', [AuthController::class, 'logout'])->name('logout');
+
 
 // Exámenes
 Route::get('/examen', [ExamenController::class, 'index'])->name('examen.index');

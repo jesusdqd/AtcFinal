@@ -57,6 +57,22 @@ class AuthController extends Controller
         $request->session()->invalidate();
         $request->session()->regenerateToken();
 
-        return redirect('/login');
+        return redirect('/');
     }
+
+    public function actualizarPerfil(Request $request)
+{
+    $request->validate([
+        'usuario' => 'required|string|max:255|unique:users,usuario,' . Auth::id(),
+        'email' => 'required|string|email|max:255|unique:users,email,' . Auth::id(),
+    ]);
+
+        $user = Auth::user();
+        $user->usuario = $request->usuario;
+        $user->email = $request->email;
+        $user->save();
+
+        return redirect()->route('perfil')->with('success', 'Perfil actualizado exitosamente.');
+    }
+
 }
