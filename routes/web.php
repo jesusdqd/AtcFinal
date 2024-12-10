@@ -1,4 +1,5 @@
 <?php
+
 use App\Http\Controllers\AreaController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\NavbarController;
@@ -6,23 +7,27 @@ use App\Http\Controllers\NavspController;
 use App\Http\Controllers\JuegoController;
 use App\Http\Controllers\ExamenController;
 use App\Http\Controllers\CrucigramaController;
-use App\Http\Controllers\BusquedaController; 
-use App\Http\Controllers\TemaController; 
-use App\Http\Controllers\SubtemaController; 
+use App\Http\Controllers\BusquedaController;
+use App\Http\Controllers\TemaController;
+use App\Http\Controllers\SubtemaController;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\ContactController;
+use App\Http\Controllers\RankingController;
+use App\Http\Controllers\PerfilController;
 
 // Página de inicio
 Route::get('/', function () {
     return view('index');
 });
+
 // Registro/Sesion
-Route::prefix('auth')->group(function (){
+Route::prefix('auth')->group(function () {
     Route::get('/login', [AuthController::class, 'showLoginForm'])->name('login');
     Route::post('/login', [AuthController::class, 'login']);
     Route::get('/register', [AuthController::class, 'showRegisterForm'])->name('register');
     Route::post('/register', [AuthController::class, 'register']);
 });
+
 // Juegos
 Route::prefix('juegos')->group(function () {
     Route::get('/{tipo}', function ($tipo) {
@@ -35,9 +40,10 @@ Route::prefix('juegos')->group(function () {
     Route::get('/', [JuegoController::class, 'juegos'])->name('juegos');
     Route::get('/crucigrama', [CrucigramaController::class, 'index'])->name('crucigrama.index');
 });
-// Areas
-Route::get('/areas/{area}',[AreaController::class, 'show'])->name('areas.show');
-    
+
+// Áreas
+Route::get('/areas/{area}', [AreaController::class, 'show'])->name('areas.show');
+
 // Index
 Route::prefix('navbar')->group(function () {
     Route::get('/', [NavbarController::class, 'show'])->name('navbar.show');
@@ -49,37 +55,30 @@ Route::prefix('navbar')->group(function () {
     Route::get('/acerca', [NavbarController::class, 'acerca'])->name('navbar.navif.acerca');
     Route::get('/privacidad', [NavbarController::class, 'privacidad'])->name('navbar.navif.privacidad');
     Route::get('/terminos', [NavbarController::class, 'terminos'])->name('navbar.navif.terminos');
-    
 });
 
 // Ruta para el perfil del usuario
 Route::get('/perfil', function () {
-    return view('perfil');  // Asegúrate de crear esta vista de perfil
-})->name('perfil')->middleware('auth'); 
-// Ruta para actualizar el perfil
-Route::post('/perfil/actualizar', [AuthController::class, 'actualizarPerfil'])->name('perfil.actualizar')->middleware('auth');
-Route::post('/logout', [AuthController::class, 'logout'])->name('logout');
+    return view('perfil');
+})->name('perfil')->middleware('auth');
 
+// Ruta para actualizar el perfil
+Route::put('/perfil/actualizar', [PerfilController::class, 'actualizar'])->name('perfil.actualizar')->middleware('auth');
+Route::post('/logout', [AuthController::class, 'logout'])->name('logout');
 
 // Exámenes
 Route::get('/examen', [ExamenController::class, 'index'])->name('examen.index');
 Route::get('/examen/{id}', [ExamenController::class, 'show'])->name('examen.show');
 Route::post('/examen/{id}/submit', [ExamenController::class, 'submit'])->name('examen.submit');
 
-
-// NavbarSP
-
-// NavbarSuperior
-
+// Navbar Superior
 Route::prefix('navsp')->group(function () {
     Route::get('/inicio', [NavspController::class, 'inicio'])->name('inicio');
     Route::get('/juegos', [NavspController::class, 'juegos'])->name('juegos');
     Route::get('/sesion', [NavspController::class, 'sesion'])->name('sesion');
-
 });
 
 Route::get('/buscar', [BusquedaController::class, 'buscar'])->name('buscar');
-
 Route::get('/tema/{id}', [TemaController::class, 'show'])->name('tema.show');
 Route::get('/subtema/{id}', [SubtemaController::class, 'show'])->name('subtema.show');
 
@@ -87,5 +86,15 @@ Route::get('/ranking', [NavspController::class, 'ranking'])->name('ranking');
 
 // Rutas para el examen
 Route::get('/examen', [ExamenController::class, 'index'])->name('examen.examen');
+Route::get('/examen/{area}', [ExamenController::class, 'mostrarExamen'])->name('examen.area');
+Route::post('/examen/{id}/resolver', [ExamenController::class, 'resolverExamen'])->name('examen.resolver');
+Route::post('/examen/{area}/submit', [ExamenController::class, 'submitExamen'])->name('examen.submit');
 
 Route::post('/contacts', [ContactController::class, 'store'])->name('contacts.store');
+Route::get('/ranking', [RankingController::class, 'index'])->name('ranking.ranking');
+
+// Rutas para agregar/actualizar información del perfil
+Route::middleware('auth')->group(function () {
+    Route::get('/perfil/agregar-info', [PerfilController::class, 'agregarInfo'])->name('perfil.agregar_info');
+    Route::post('/perfil/store-info', [PerfilController::class, 'storeInfo'])->name('perfil.store_info.store');
+});

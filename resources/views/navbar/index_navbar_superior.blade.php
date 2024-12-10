@@ -34,7 +34,7 @@
         <li><a href="{{ route('juegos') }}">
             <img src="{{ asset('Assets/Iconos/Barra_Navegacion/Mando.png') }}" alt="Icono de Juegos">Juegos</a>
         </li>
-        <li><a href="{{ route('ranking') }}">
+        <li><a href="{{ route('ranking.ranking') }}">
             <img src="{{ asset('Assets/Iconos/Barra_Navegacion/Trofeo.png') }}" alt="Icono de Trofeo">Ranking</a>
         </li>
 

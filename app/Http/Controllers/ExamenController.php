@@ -2,46 +2,61 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Examen; // Asegúrate de importar el modelo Examen
 use Illuminate\Http\Request;
 
 class ExamenController extends Controller
 {
-    
     public function index()
     {
-        $areas = [
-            ['id' => 1, 'nombre' => 'Matemáticas', 'descripcion' => 'Examen sobre matemáticas básicas.'],
-            ['id' => 2, 'nombre' => 'Política', 'descripcion' => 'Examen sobre conocimientos políticos.'],
-            // Agrega más áreas...
-        ];
-        return view('examen.examen', compact('areas'));
+        // Áreas disponibles
+        $areas = ['matematicas', 'politica', 'arte', 'informatica', 'etica', 'quimica', 'lectura', 'religion'];
+        
+        // Retorna la vista con todas las áreas
+        return view('examen.index', compact('areas'));
     }
 
-    public function show($id)
+    // Método para mostrar el examen de una área específica
+    public function show($area)
     {
-        // Definición de áreas
-        $areas = [
-            1 => ['id' => 1, 'nombre' => 'Matemáticas'],
-            2 => ['id' => 2, 'nombre' => 'Política'],
-            3 => ['id' => 3, 'nombre' => 'Informatica'],
-        ];
-
-        $preguntas = [
-            1 => [
-                ['id' => 1, 'texto' => '¿Cuánto es 2 + 2?', 'opciones' => ['3', '4', '5']],
-                ['id' => 2, 'texto' => '¿Cuál es la raíz cuadrada de 16?', 'opciones' => ['2', '4', '8']],
-            ],
-
-        ];
-    
-        if (!isset($areas[$id])) {
-            abort(404); 
-        }
-    
-        $area = $areas[$id];
-        $preguntasArea = $preguntas[$id]; // Obtiene las preguntas correspondientes al área seleccionada
-    
-        return view('examen.show', compact('area', 'preguntasArea'));
+        // Obtiene el examen de la base de datos según el área
+        $examen = Examen::where('area', $area)->first();
+        
+        // Retorna la vista del examen pasando el examen y el área
+        return view('examen.examen', compact('examen', 'area'));
     }
+    public function crearExamen()
+{
+    $examen = new Examen();
+    $examen->area = 'matematicas';
+    $examen->preguntas = json_encode([
+        [
+            'pregunta' => '¿Cuánto es 2 + 2?',
+            'respuestas' => ['3', '4', '5'],
+            'respuesta_correcta' => '4'
+        ],
+        [
+            'pregunta' => '¿Cuánto es 5 x 6?',
+            'respuestas' => ['30', '35', '40'],
+            'respuesta_correcta' => '30'
+        ]
+    ]);
+    $examen->save();
+
+}
+public function submitExamen(Request $request, $area)
+{
+    $examen = Examen::where('area', $area)->first();
+    $preguntas = json_decode($examen->preguntas);
+
+    $resultado = 0;
+    foreach ($preguntas as $key => $pregunta) {
+        if ($request->input('respuesta_' . $key) == $pregunta->respuesta_correcta) {
+            $resultado++;
+        }
+    }
+
+    return view('examen.resultado', compact('resultado', 'area'));
 }
 
+}
